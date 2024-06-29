@@ -49,6 +49,39 @@ public class CandidatesController : ControllerBase
         await _context.SaveChangesAsync();
         return Ok(candidate);
     }
+
+    [HttpPost("batch")]
+    public async Task<IActionResult> CreateOrUpdateCandidates([FromBody] List<Candidate> candidates)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        foreach (var candidate in candidates)
+        {
+            var existingCandidate = await _context.Candidates.FindAsync(candidate.Email);
+            if (existingCandidate == null)
+            {
+                _context.Candidates.Add(candidate);
+            }
+            else
+            {
+                existingCandidate.FirstName = candidate.FirstName;
+                existingCandidate.LastName = candidate.LastName;
+                existingCandidate.PhoneNumber = candidate.PhoneNumber;
+                existingCandidate.CallTimeInterval = candidate.CallTimeInterval;
+                existingCandidate.LinkedInProfileUrl = candidate.LinkedInProfileUrl;
+                existingCandidate.GitHubProfileUrl = candidate.GitHubProfileUrl;
+                existingCandidate.FreeTextComment = candidate.FreeTextComment;
+                _context.Candidates.Update(existingCandidate);
+            }
+        }
+
+        await _context.SaveChangesAsync();
+        return Ok(candidates);
+    }
+
     [HttpGet("{email}")]
     public async Task<IActionResult> GetCandidateByEmail(string email)
     {

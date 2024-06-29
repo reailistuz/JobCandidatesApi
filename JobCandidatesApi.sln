@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidatesApi", "JobCandidatesApi\JobCandidatesApi.csproj", "{1744C1D3-FCCF-480D-A50C-59840DDAA7A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidatesApi", "JobCandidatesApi\JobCandidatesApi.csproj", "{1744C1D3-FCCF-480D-A50C-59840DDAA7A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidatesApi.Tests", "JobCandidatesApi.Tests\JobCandidatesApi.Tests.csproj", "{66DA3F7D-BB10-4484-B89D-F71297518624}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1744C1D3-FCCF-480D-A50C-59840DDAA7A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1744C1D3-FCCF-480D-A50C-59840DDAA7A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1744C1D3-FCCF-480D-A50C-59840DDAA7A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66DA3F7D-BB10-4484-B89D-F71297518624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66DA3F7D-BB10-4484-B89D-F71297518624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66DA3F7D-BB10-4484-B89D-F71297518624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66DA3F7D-BB10-4484-B89D-F71297518624}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
