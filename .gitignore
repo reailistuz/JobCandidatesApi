@@ -325,10 +325,6 @@ _ReSharper*
 # Coverlet coverage
 coverage*
 
-# Don't include markdown file outputs
-# See https://github.com/github/VisualStudio/issues/1750
-*.md
-
 # Ignore folders
 .svn
 .nuget/packages
